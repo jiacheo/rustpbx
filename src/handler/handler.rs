@@ -23,6 +23,10 @@ pub fn router() -> Router<AppState> {
         .route("/call/kill/{id}", post(kill_call))
         .nest("/llm/v1", super::llmproxy::router())
         .route("/iceservers", get(super::webrtc::get_iceservers))
+        // WebRTC SDP endpoints
+        .route("/webrtc/offer", post(super::webrtc::handle_sdp_offer))
+        .route("/webrtc/ice-candidate", post(super::webrtc::handle_ice_candidate))
+        .route("/webrtc/close", post(super::webrtc::handle_close_session))
 }
 
 async fn list_calls(State(state): State<AppState>) -> Response {

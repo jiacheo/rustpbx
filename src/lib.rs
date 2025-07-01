@@ -13,6 +13,7 @@ pub mod proxy;
 pub mod synthesis;
 pub mod transcription;
 pub mod useragent;
+pub mod webrtc_client;
 
 pub type TrackId = String;
 pub type Sample = i16;

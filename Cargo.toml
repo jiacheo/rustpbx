@@ -105,6 +105,9 @@ portpicker = "0.1.1"
 name = "webrtc-demo"
 path = "examples/webrtc-demo/src/main.rs"
 
+[[example]]
+name = "webrtc-sdp-example"
+path = "examples/webrtc_sdp_example.rs"
 
 [[example]]
 name = "voice-demo"
